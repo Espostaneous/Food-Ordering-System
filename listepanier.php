@@ -16,7 +16,7 @@ $data = $res->fetch();
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>FoodZone - Restaurant</title>
+    <title>Three Guys - Cart Process</title>
     <meta name="description" content="Resto">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -197,7 +197,7 @@ $data = $res->fetch();
                         <td class="col-sm-1 col-md-1" style="text-align: center">
                         <input type="text" class="form-control"  value="<?php echo $data['qty']?>">
                         </td>
-                        <td class="col-sm-1 col-md-1 text-center"><strong><?php echo $data['price']?> <sup>TND</sup></strong></td>
+                        <td class="col-sm-1 col-md-1 text-center"> ₱ <strong><?php echo $data['price']?> </strong></td>
                         <td class="col-sm-1 col-md-1">
                         <a href="deletepanier.php?id=<?php echo $data['pid']?>" class="btn btn-danger">
                         <i class="fa fa-trash"></i>
@@ -207,15 +207,24 @@ $data = $res->fetch();
                 <?php }?>
                 </tbody>
             </table>
-            <h5>shipping : Free</h5>
-            <h3> Total : <?php echo $total_prix ;?> <sup>TND</sup></h3>
+            <h5>shipping : free</h5>
+            <h3> Total : ₱ <?php echo $total_prix ;?> </h3>
+            <h5>Cash on Delivery</h5>
             <a href="index.php" class="btn btn-default">
-                <span class="glyphicon glyphicon-shopping-cart"></span> Continue Shopping
+                <span class="glyphicon glyphicon-shopping-cart"></span>Continue Shopping
             </a>
                     <style>
-                        .btn-success:hover{
-                            color: aliceblue;
+                        .btn-success {
+                         background-color: #0066b2;
+                         border-color: #0066b2;
+                         color: white;
                         }
+
+                        .btn-success:hover {
+                         color: aliceblue;
+                         background-color: #034694; /* Optional: Darker blue for hover effect */
+                         border-color: #034694;
+                         }
                     </style>
             <a href="checkout.php" class="btn btn-success">
                 Checkout <span class="glyphicon glyphicon-play"></span>

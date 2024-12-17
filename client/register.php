@@ -18,8 +18,7 @@ if (isset($_SESSION['name']) != ""){
       <div class="shadow-lg bg-white rounded testmarg">
       <form action="create.php" method="POST" enctype="multipart/form-data">
       <div class="text-center">
-      <img src="../img/logo.png" alt="FoodZone"><br><br>
-          <h1>Create your account</h1><br><br>
+          <h1>Create Account</h1><br><br>
           </div>
             <div class="form-group">
             <label for="nom"> Name </label>
@@ -34,7 +33,7 @@ if (isset($_SESSION['name']) != ""){
             </div>
 
             <div class="form-group">
-            <label for="adresse"> Adresse </label>
+            <label for="adresse"> Address </label>
             <input type="text" name="adresse" placeholder="Your adresse*" class="form-control" required>
             </div>
 
@@ -57,12 +56,12 @@ if (isset($_SESSION['name']) != ""){
             </div>
 
             <div class="form-group">
-            <label for="profpic"> Profil Pic </label>
+            <label for="profpic"> Profile Pic </label>
             <input type="file" name="profpic" class="form-control">
             </div>
 
             <div>
-            <button  type="submit" class="btn btn-primary btn-shadow btn-lg" >Valider</button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <button  type="submit" class="btn btn-primary btn-shadow btn-lg" >Create</button>&nbsp;&nbsp;&nbsp;&nbsp;
             </div>
             </form>
       </div>

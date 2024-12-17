@@ -62,7 +62,7 @@ $res = $emp->listemploys();
           <i class="fas fa-user-circle fa-fw"></i>
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-          <a class="dropdown-item" href="add_empl.php">add employe</a>
+          <a class="dropdown-item" href="add_empl.php">Add employee</a>
           <a class="dropdown-item" href="product.php">Add product</a>
           <a class="dropdown-item" href="cars.php">Add car</a>
           <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>

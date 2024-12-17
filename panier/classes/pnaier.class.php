@@ -13,7 +13,7 @@
         }
 
         public function getInfo($pid){
-            $req = 'SELECT * FROM products WHERE pid=:pid';
+            $req = 'SELECT * FROM produits WHERE pid=:pid';
             $result  = $this->cnx->prepare($req);
             $result->bindParam(':pid',$pid);
             if($result->execute()){
@@ -51,7 +51,7 @@
         }
 
         public function insertinto_order($qty,$status,$pid,$cid){
-            $sql = 'INSERT INTO order (qty,status,pid,cid) VALUES (:qty, :status, :pid, :cid)';
+            $sql = 'INSERT INTO ordre (qty,status,pid,cid) VALUES (:qty, :status, :pid, :cid)';
             $result = $this->cnx->prepare($sql);
             $result->bindParam(':qty',$qty);
             $result->bindParam(':status',$status);

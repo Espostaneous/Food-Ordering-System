@@ -38,8 +38,7 @@ if(@$_GET['error'] == 'wrong') {?>
     <div class="shadow-lg bg-white rounded testmarg">
     <form name="login" method="POST" action="verifloginc.php">
     <div class="text-center">
-    <img src="../img/logo.png" alt=""><br><br>
-    <h1>Log in to Food Zone</h1><br><br>
+    <h1>Log in</h1><br><br>
     </div>
         <span class="text-danger"><?= @$_GET['msg'] ?></span><br>
         <div>

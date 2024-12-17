@@ -10,7 +10,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>admin panel</title>
+  <title>Admin Panel</title>
 
   <!-- Custom fonts for this template-->
   <link href="../style/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -22,7 +22,7 @@
 <body class="bg-dark">
   <div class="container" style="padding: 9%;">
     <div class="card card-register mx-auto mt-5">
-      <div class="card-header text-center"><img src="../style/img/logo.png" alt="logo"></div>
+      <div class="card-header text-center">Add Employee</div>
       <div class="card-body">
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
 
@@ -36,7 +36,7 @@
           <div class="form-group">
             <div class="form-label-group">
               <input type="number" id="inputphn" name="phone" value="<?= $_POST['phone'] ?? '' ?>"class="form-control" placeholder="phone" required="">
-              <label for="inputphn">phone</label>
+              <label for="inputphn">Phone Number</label>
               <span class="text-danger"><?php if (isset($phone_error)) echo $phone_error; ?></span>
             </div>
           </div>
@@ -68,12 +68,12 @@
                 <select class="browser-default custom-select mt-3 mb-3" name="type">
                     <option selected>Select type</option>
                     <option value="admin">admin</option>
-                    <option value="employe">employe</option>
+                    <option value="employe">employee</option>
                 </select>
                 <span class="text-danger"><?php if (isset($type_error)) echo $type_error; ?></span>
             </div>
             </div>
-          <button class="btn btn-danger btn-block" type="submit" name="submit">add employe</button>
+          <button class="btn btn-danger btn-block" type="submit" name="submit">add employee</button>
         </form>
         
       </div>
