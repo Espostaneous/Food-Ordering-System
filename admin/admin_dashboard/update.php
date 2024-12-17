@@ -24,7 +24,7 @@ $data = $res->fetch();
       <div class="shadow-lg bg-white rounded testmarg">
       <form action="up.php?id=<?php echo $_GET['id'];?>" method="POST" enctype="multipart/form-data">
       <div class="text-center">
-      <img src="../../img/logo.png" alt="FoodZone"><br><br>
+        
           <h1>Update Product</h1><br><br>
           </div>
             <div class="form-group">

@@ -114,7 +114,7 @@ $data = $result->fetch();
                     </ul>
 
                     <a class="navbar-brand navbar-brand-center d-flex align-items-center only-desktop" href="index.php">
-                        <img src="img/logo.jpg" alt="">
+                        <img src="img/logo.png" alt="">
                     </a>
                     <ul class="navbar-nav d-flex justify-content-between">
                         <div class="d-flex flex-lg-row flex-column">
@@ -187,7 +187,7 @@ $data = $result->fetch();
                     <div class="col-lg-6 hero-left">
                         <h1 class="display-4 mb-5">Enjoy our food <br>made just for you!</h1>
                         <div class="mb-2">
-                            <a class="btn btn-primary btn-shadow btn-lg" href="lundin.php" role="button">Explore Menu</a>
+                            <a class="btn btn-primary btn-shadow btn-lg" href="lundin.php" role="button">View Menu</a>
 
                         </div>
 
@@ -243,7 +243,7 @@ $data = $result->fetch();
                 ThreeGuys is dedicated to delivering the best of Filipino cuisine right to your door. 
                 Our food ordering system offers a wide array of Filipino favorites, crafted with care 
                 and authenticity. From savory dishes like adobo and pancit to comforting soups like sinigang, 
-                we bring the flavors of the Philippines directly to your home. Whether you’re craving traditional 
+                we bring the flavors of the Philippines directly to your home. Whether you're craving traditional 
                 meals or looking to try something new, ThreeGuys ensures that every dish is made with fresh, 
                 high-quality ingredients, prepared to capture the true essence of Filipino cooking. We are 
                 committed to providing our customers with an easy and delightful dining experience, one meal at a time.
@@ -275,7 +275,7 @@ $data = $result->fetch();
                     <div class="dishes-text">
                         <h4>Batchoy</h4>
                         <p class="pt-3">Comforting Filipino noodle soup made with miki noodles in a rich and flavorful 
-                            broth simmered with pork, beef, or chicken. It’s topped with generous servings of pork liver, 
+                            broth simmered with pork, beef, or chicken. It's topped with generous servings of pork liver, 
                             crispy chicharon, green onions, garlic, and sometimes raw egg, which is stirred into the hot soup 
                             for added richness.</p>
                         <h3 class="special-dishes-price">₱40.00</h3>

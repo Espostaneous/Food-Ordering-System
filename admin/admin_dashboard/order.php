@@ -103,7 +103,7 @@
       <li class="nav-item">
         <a class="nav-link" href="register.html">
           <i class="fas fa-plus-square"></i>
-          <span class="ml-2">Add Employe</span></a>
+          <span class="ml-2">Add Employee</span></a>
       </li>
     </ul>
 

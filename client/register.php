@@ -18,7 +18,7 @@ if (isset($_SESSION['name']) != ""){
       <div class="shadow-lg bg-white rounded testmarg">
       <form action="create.php" method="POST" enctype="multipart/form-data">
       <div class="text-center">
-          <h1>Create Account</h1><br><br>
+          <h2>Create Account</h2><br><br>
           </div>
             <div class="form-group">
             <label for="nom"> Name </label>
@@ -34,7 +34,7 @@ if (isset($_SESSION['name']) != ""){
 
             <div class="form-group">
             <label for="adresse"> Address </label>
-            <input type="text" name="adresse" placeholder="Your adresse*" class="form-control" required>
+            <input type="text" name="adresse" placeholder="Your address*" class="form-control" required>
             </div>
 
             <div class="form-group">

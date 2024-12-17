@@ -62,9 +62,9 @@ $res = $emp->listemploys();
           <i class="fas fa-user-circle fa-fw"></i>
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-          <a class="dropdown-item" href="add_empl.php">Add employee</a>
-          <a class="dropdown-item" href="product.php">Add product</a>
-          <a class="dropdown-item" href="cars.php">Add car</a>
+          <a class="dropdown-item" href="add_empl.php">Add Employee</a>
+          <a class="dropdown-item" href="product.php">Add Product</a>
+          <a class="dropdown-item" href="cars.php">Add Car</a>
           <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
         </div>
       </li>
@@ -111,7 +111,7 @@ $res = $emp->listemploys();
                 <div class="card-body-icon">
                   <i class="fas fa-fw fa-shopping-cart"></i>
                 </div>
-                <div class="mr-5">List of product</div>
+                <div class="mr-5">List of Product</div>
               </div>
               <a class="card-footer text-white clearfix small z-1" href="listproduct.php">
                 <span class="float-left">View Details</span>
@@ -127,7 +127,7 @@ $res = $emp->listemploys();
                 <div class="card-body-icon">
                   <i class="fas fa-fw fa-shopping-cart"></i>
                 </div>
-                <div class="mr-5">List of employs</div>
+                <div class="mr-5">List of Employee</div>
               </div>
               <a class="card-footer text-white clearfix small z-1" href="#">
                 <span class="float-left">View Details</span>
@@ -205,7 +205,7 @@ $res = $emp->listemploys();
             <span aria-hidden="true">×</span>
           </button>
         </div>
-        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
           <a class="btn btn-primary" href="../login_to_admin_panel/logout.php">Logout</a>

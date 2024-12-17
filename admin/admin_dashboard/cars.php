@@ -32,7 +32,7 @@
         echo '<td>'.$data['vehiculenumber'].'</td>';
         echo'<td> 
         
-        <a href="vehicule_poo/suprimer.php?vid='.$data['idcar'].'" class="btn btn-danger ">Suprimer vehicule </a>
+        <a href="vehicule_poo/suprimer.php?vid='.$data['idcar'].'" class="btn btn-danger ">Delete Vehicle </a>
       
         ';
         echo '</td>';
