@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: Dec 08, 2019 at 06:17 PM
--- Server version: 5.7.26
--- PHP Version: 7.2.18
+-- Host: 127.0.0.1
+-- Generation Time: Dec 18, 2024 at 04:31 AM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -28,13 +27,19 @@ SET time_zone = "+00:00";
 -- Table structure for table `car`
 --
 
-DROP TABLE IF EXISTS `car`;
-CREATE TABLE IF NOT EXISTS `car` (
-  `idcar` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+CREATE TABLE `car` (
+  `idcar` int(10) UNSIGNED NOT NULL,
   `status` int(2) NOT NULL,
-  `vehiculenumber` varchar(50) NOT NULL,
-  PRIMARY KEY (`idcar`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+  `vehiculenumber` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `car`
+--
+
+INSERT INTO `car` (`idcar`, `status`, `vehiculenumber`) VALUES
+(3, 0, '123'),
+(5, 0, '456');
 
 -- --------------------------------------------------------
 
@@ -42,16 +47,12 @@ CREATE TABLE IF NOT EXISTS `car` (
 -- Table structure for table `chariot`
 --
 
-DROP TABLE IF EXISTS `chariot`;
-CREATE TABLE IF NOT EXISTS `chariot` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `chariot` (
+  `id` int(11) NOT NULL,
   `qty` int(250) NOT NULL,
   `cid` int(11) NOT NULL,
-  `pid` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `cid` (`cid`),
-  KEY `pid` (`pid`)
-) ENGINE=InnoDB AUTO_INCREMENT=169 DEFAULT CHARSET=utf8;
+  `pid` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -59,27 +60,22 @@ CREATE TABLE IF NOT EXISTS `chariot` (
 -- Table structure for table `clients`
 --
 
-DROP TABLE IF EXISTS `clients`;
-CREATE TABLE IF NOT EXISTS `clients` (
-  `cid` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `clients` (
+  `cid` int(11) NOT NULL,
   `name` varchar(30) NOT NULL,
   `email` varchar(30) NOT NULL,
   `pwd` varchar(100) NOT NULL,
   `phonenumber` int(11) NOT NULL,
   `adresse` text NOT NULL,
-  `img` varchar(200) NOT NULL,
-  PRIMARY KEY (`cid`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+  `img` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `clients`
 --
 
 INSERT INTO `clients` (`cid`, `name`, `email`, `pwd`, `phonenumber`, `adresse`, `img`) VALUES
-(1, 'houcem', 'nlus040815@gmail.com', '$2y$10$LdebVs8yLck6.CMPyNT8xeL81QuAvFrAysvQH4dYxnLgzb4g1kPsm', 26248366, 'el alia', 'profilpic/1575574781_chef-2.jpg'),
-(2, 'bilel', 'bilelmerseni7016@gmail.com', '$2y$10$yKE/py71fQ12ivGhGVikuOITG.Jvo59L.0tPYdxtFyWWKjtYEjeMa', 26248366, 'el alia bizerte 7016', 'profilpic/1575632563_chef-3.jpg'),
-(3, 'bilel', 'test@testest.com', '$2y$10$KLQebJQlKmWQMIpVvwCMquKZS2LBPLPMiChBzu83e4UrCjHgbiBE6', 26248366, 'bizerte', 'profilpic/1575719736_32.jpg'),
-(4, 'mokhtar', 'mokhtar@test.com', '$2y$10$2shlcwaEggL3JVqVbv9JiO7pOquK1635foHo8z/s.woGqOnzltc8S', 26248366, 'el alia', 'profilpic/default-avatar.jpg');
+(5, 'Aech', 'aek@gmail.com', '$2y$10$DIy2GCS4I2AE4VcS26fnxeJ67MeW79PPqthHgBnj62sHWIjzhX12G', 123456789, 'Manolo', 'profilpic/default-avatar.jpg');
 
 -- --------------------------------------------------------
 
@@ -87,16 +83,14 @@ INSERT INTO `clients` (`cid`, `name`, `email`, `pwd`, `phonenumber`, `adresse`, 
 -- Table structure for table `employé`
 --
 
-DROP TABLE IF EXISTS `employé`;
-CREATE TABLE IF NOT EXISTS `employé` (
-  `eid` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `employé` (
+  `eid` int(11) NOT NULL,
   `name` varchar(30) NOT NULL,
   `phno` int(15) NOT NULL,
   `email` varchar(32) NOT NULL,
   `password` varchar(120) NOT NULL,
-  `type` varchar(50) NOT NULL,
-  PRIMARY KEY (`eid`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
+  `type` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `employé`
@@ -104,7 +98,7 @@ CREATE TABLE IF NOT EXISTS `employé` (
 
 INSERT INTO `employé` (`eid`, `name`, `phno`, `email`, `password`, `type`) VALUES
 (1, 'admin', 26248366, 'admin@food.com', '$2y$10$bhZgfD5jh22aUimjxwvkZue8BsM2SVgCAvJmJFARKfp16XVcA2UnK', 'admin'),
-(2, 'ghazi', 26248366, 'ghazi@empl.com', '$2y$10$bhZgfD5jh22aUimjxwvkZue8BsM2SVgCAvJmJFARKfp16XVcA2UnK', 'employe');
+(22, 'aaekk', 123454321, 'aaekk@gmail.com', '$2y$10$7gZL3OnHoI0bibD4UjFpFeo/6JvMHmAmc.EzbXME5nM8YWPBE5qXe', 'employe');
 
 -- --------------------------------------------------------
 
@@ -112,17 +106,30 @@ INSERT INTO `employé` (`eid`, `name`, `phno`, `email`, `password`, `type`) VALU
 -- Table structure for table `ordre`
 --
 
-DROP TABLE IF EXISTS `ordre`;
-CREATE TABLE IF NOT EXISTS `ordre` (
-  `oid` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `ordre` (
+  `oid` int(11) NOT NULL,
   `qty` int(25) NOT NULL,
   `status` int(11) NOT NULL,
   `pid` int(11) NOT NULL,
-  `cid` int(11) NOT NULL,
-  PRIMARY KEY (`oid`),
-  KEY `pid` (`pid`),
-  KEY `cid` (`cid`)
-) ENGINE=InnoDB AUTO_INCREMENT=97 DEFAULT CHARSET=utf8;
+  `cid` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `ordre`
+--
+
+INSERT INTO `ordre` (`oid`, `qty`, `status`, `pid`, `cid`) VALUES
+(97, 1, 1, 27, 5),
+(98, 1, 1, 28, 5),
+(99, 1, 1, 31, 5),
+(100, 1, 1, 33, 5),
+(101, 1, 1, 31, 5),
+(102, 1, 1, 33, 5),
+(103, 1, 1, 31, 5),
+(104, 1, 1, 33, 5),
+(105, 1, 1, 31, 5),
+(106, 1, 1, 33, 5),
+(107, 1, 1, 29, 5);
 
 -- --------------------------------------------------------
 
@@ -130,30 +137,118 @@ CREATE TABLE IF NOT EXISTS `ordre` (
 -- Table structure for table `produits`
 --
 
-DROP TABLE IF EXISTS `produits`;
-CREATE TABLE IF NOT EXISTS `produits` (
-  `pid` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `produits` (
+  `pid` int(11) NOT NULL,
   `name` varchar(120) NOT NULL,
   `description` text NOT NULL,
   `price` int(10) NOT NULL,
   `file` text NOT NULL,
-  `type` varchar(20) NOT NULL,
-  PRIMARY KEY (`pid`)
-) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8;
+  `type` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `produits`
 --
 
 INSERT INTO `produits` (`pid`, `name`, `description`, `price`, `file`, `type`) VALUES
-(25, 'bilel', 'roti de veau , cafe de fond de veau, soupe de herbes de Provence', 55, '1575672841_63.jpg', 'breakfast'),
-(26, 'quick breakfast', 'coffee, juice, eggs, steak, pancakes', 100, '1575673264_47.jpg', 'breakfast'),
-(27, 'healthy morning', 'tea, fruit, jambon, bread,cheese, lettuce', 80, '1575673319_25.jpg', 'breakfast'),
-(28, 'love bowl', 'ice,white chocolate, dark chocolate,chocolate piece', 100, '1575673361_61.jpg', 'lunch'),
-(29, 'PLATEAU DE FRUIT', ' Huitre , buccin onde, homard, langoustines , Crevette,  coquillage', 180, '1575673417_62.jpg', 'lunch'),
-(31, 'ROTI DE VEAU SAUCE', 'ricotta, smoked salmon, egg, dill, fresh cream, parmesan', 100, '1575673511_63.jpg', 'lunch'),
-(32, 'bilelmerseniqq', 'Ground beef, Gruyere grated, crushed tomatoes', 111, '1575673945_42.jfif', 'breakfast'),
-(33, 'bilel merseni', 'Ground beef, Gruyere grated, crushed tomatoes', 300, '1575673983_42.jfif', 'breakfast');
+(27, 'kaldereta', 'made with tender meat, often goat, beef, or chicken, slow-cooked in a rich tomato-based sauce, potatoes, carrots, bell peppers, and sometimes olives for a tangy twist.', 40, 'kaldereta.jpg', 'breakfast'),
+(28, 'pancit bihon', 'made with vegetables like carrots, cabbage, and bell peppers, along with meat such as chicken, pork, or shrimp.', 25, 'pancit bihon.jpg', 'lunch'),
+(29, 'mechado', 'flavored with tomato-basedd sauce, vinegar, garlic, and onions, and vegetables like potatoes, carrots, and bell peppers.', 40, 'mechado.jpg', 'lunch'),
+(31, 'batchoy', 'made with miki noodles, pork, beef, or chicken, topped with pork liver, chicharon, green onions, garlic, and egg.', 60, 'batchoy.jpg', 'lunch'),
+(32, 'adobo', 'made by simmering meat, typically chicken or pork, in a flavorful mix of soy sauce, vinegar, garlic, bay leaves, and peppercorns.', 45, 'adobo.jpg', 'breakfast'),
+(33, 'bulalo', 'made with tender beef chunks simmered to perfection with potatoes, carrots, cabbage, and pechay (bok choy).', 55, 'bulalo.jpg', 'lunch'),
+(40, 'adobong kangkong', 'featuring water spinach (kangkong) cooked in a savory and tangy sauce made with soy sauce, vinegar, garlic, and onions. ', 30, 'adobong kangkong.jpg', 'breakfast'),
+(41, 'beef nilaga', 'made with tender beef chunks simmered to perfection with potatoes, carrots, cabbage, and pechay (bok choy).', 45, 'beef nilaga.jpg', 'lunch'),
+(42, 'chopsuey', 'made with a colorful mix of vegetables like carrots, cabbage, cauliflower, broccoli, and snow peas.', 35, 'chopsuey.jpg', 'breakfast'),
+(43, 'pancit malabon', 'topped with an array of ingredients such as shrimp, squid, smoked fish flakes, boiled eggs, and crushed chicharon.', 50, 'pancit malabon.jpg', 'breakfast'),
+(45, 'tortang talong', 'features grilled or roasted eggplant, which is flattened and dipped in a seasoned egg mixture, then pan-fried to perfection.', 80, 'tortang talong.jpg', 'breakfast'),
+(46, 'lechon kawali', 'made by deep-frying pork belly, juicy meat with a crunchy skin is often served with a side of liver sauce, and soy-vinegar dip.', 80, 'lechon kawali.jpg', 'lunch'),
+(47, 'sinigang', 'made with tender pork, vegetables like kangkong, radish, eggplant, and okra, all simmered in a tamarind-based broth.', 80, 'sinigang na baboy.jpg', 'lunch'),
+(48, 'kare kare', 'made with oxtail, tripe, or pork, cooked in a savory peanut-based sauce.Vegetables like eggplant and string beans.', 80, 'kare kare.jpg', 'breakfast');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `car`
+--
+ALTER TABLE `car`
+  ADD PRIMARY KEY (`idcar`);
+
+--
+-- Indexes for table `chariot`
+--
+ALTER TABLE `chariot`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `cid` (`cid`),
+  ADD KEY `pid` (`pid`);
+
+--
+-- Indexes for table `clients`
+--
+ALTER TABLE `clients`
+  ADD PRIMARY KEY (`cid`);
+
+--
+-- Indexes for table `employé`
+--
+ALTER TABLE `employé`
+  ADD PRIMARY KEY (`eid`);
+
+--
+-- Indexes for table `ordre`
+--
+ALTER TABLE `ordre`
+  ADD PRIMARY KEY (`oid`),
+  ADD KEY `pid` (`pid`),
+  ADD KEY `cid` (`cid`);
+
+--
+-- Indexes for table `produits`
+--
+ALTER TABLE `produits`
+  ADD PRIMARY KEY (`pid`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `car`
+--
+ALTER TABLE `car`
+  MODIFY `idcar` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `chariot`
+--
+ALTER TABLE `chariot`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=200;
+
+--
+-- AUTO_INCREMENT for table `clients`
+--
+ALTER TABLE `clients`
+  MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `employé`
+--
+ALTER TABLE `employé`
+  MODIFY `eid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
+--
+-- AUTO_INCREMENT for table `ordre`
+--
+ALTER TABLE `ordre`
+  MODIFY `oid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=108;
+
+--
+-- AUTO_INCREMENT for table `produits`
+--
+ALTER TABLE `produits`
+  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- Constraints for dumped tables
