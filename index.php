@@ -187,7 +187,7 @@ $data = $result->fetch();
             <div class="container">
                 <div class="row d-flex align-items-center">
                     <div class="col-lg-6 hero-left">
-                        <h1 class="display-4 mb-5">Enjoy our food, <br>made just for you!</h1>
+                        <h1 class="display-4 mb-5">Enjoy our food <br>made just for you!</h1>
                         <div class="mb-2">
                             <a class="btn btn-primary btn-shadow btn-lg" href="lundin.php" role="button">View Menu</a>
 
@@ -224,10 +224,10 @@ $data = $result->fetch();
                                 <img class="img-fluid" src="img/hero-5.jpg" alt="">
                             </div>
                             <div class="item">
-                                <img class="img-fluid" src="img/hero-6.jpg" alt="">
+                                <img class="img-fluid" src="img/hero-8.jpg" alt="">
                             </div>
                             <div class="item">
-                                <img class="img-fluid" src="img/hero-7.jpg" alt="">
+                                <img class="img-fluid" src="img/hero-10.jpg" alt="">
                             </div>
                         
                         </div>
