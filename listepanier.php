@@ -207,8 +207,8 @@ $data = $res->fetch();
                 <?php }?>
                 </tbody>
             </table>
-            <h5>shipping : free</h5>
-            <h3> Total : ₱ <?php echo $total_prix ;?> </h3>
+            <h5>shipping: free</h5>
+            <h3> Total: ₱ <?php echo $total_prix ;?> </h3>
             <h5>Cash on Delivery</h5>
             <a href="index.php" class="btn btn-default">
                 <span class="glyphicon glyphicon-shopping-cart"></span>Continue Shopping

@@ -1,4 +1,4 @@
-<?php 
+<?php
 require "client/class/dbconnect.class.php";
 session_start();
 
@@ -42,6 +42,8 @@ $data = $result->fetch();
 
         <script src="https://use.fontawesome.com/5b67370c4c.js"></script>
 
+
+        
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -185,7 +187,7 @@ $data = $result->fetch();
             <div class="container">
                 <div class="row d-flex align-items-center">
                     <div class="col-lg-6 hero-left">
-                        <h1 class="display-4 mb-5">Enjoy our food <br>made just for you!</h1>
+                        <h1 class="display-4 mb-5">Enjoy our food, <br>made just for you!</h1>
                         <div class="mb-2">
                             <a class="btn btn-primary btn-shadow btn-lg" href="lundin.php" role="button">View Menu</a>
 
@@ -307,6 +309,54 @@ $data = $result->fetch();
     </div>
 </section>
         <!-- End of Special Dishes Section -->
+
+        <section id="why-choose-us" class="bg-white section-padding">
+    <div class="container">
+        <div class="section-content">
+            <div class="heading-section text-center">
+                <h2>Why Choose Us?</h2>
+                <p>Our restaurant offers the best food delivery service with fresh and high-quality ingredients.</p>
+            </div>
+            <div class="row text-center">
+                <!-- Fast Delivery -->
+                <div class="col-md-3">
+                    <div class="feature-box">
+                        <span class="lnr lnr-car" style="font-size: 3rem; color: #ff5733;"></span>
+                        <h4>Fast Delivery</h4>
+                        <p>Enjoy prompt and reliable delivery to your doorstep.</p>
+                    </div>
+                </div>
+                <!-- Fresh Ingredients -->
+                <div class="col-md-3">
+                    <div class="feature-box">
+                        <span class="lnr lnr-leaf" style="font-size: 3rem; color: #28a745;"></span>
+                        <h4>Fresh Ingredients</h4>
+                        <p>We use only the freshest and highest quality ingredients.</p>
+                    </div>
+                </div>
+                <!-- Friendly Service -->
+                <div class="col-md-3">
+                    <div class="feature-box">
+                        <span class="lnr lnr-smile" style="font-size: 3rem; color: #ffb81c;"></span>
+                        <h4>Friendly Service</h4>
+                        <p>Experience warm and welcoming customer service.</p>
+                    </div>
+                </div>
+                <!-- Exceptional Taste -->
+                <div class="col-md-3">
+                    <div class="feature-box">
+                        <span class="lnr lnr-heart" style="font-size: 3rem; color: #e74c3c;"></span>
+                        <h4>Exceptional Taste</h4>
+                        <p>Savor the irresistible flavors of our dishes with every bite.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
         <!-- Menu Section -->
         <section id="gtco-menu" class="section-padding">
             <div class="container">
@@ -355,6 +405,40 @@ $data = $result->fetch();
             </div>            
         </section>
         <!-- End of menu Section -->       
+
+<!-- Customer Reviews Section -->
+<section id="gtco-reviews" class="bg-light section-padding">
+    <div class="container">
+        <div class="section-content text-center">
+            <h2 class="mb-5">Hear from Our Happy Customers</h2>
+            <div class="row">
+                <!-- Customer Review 1 -->
+                <div class="col-md-4">
+                    <div class="review-box">
+                        <p class="review-text">"The food is absolutely delicious! I ordered the Batchoy, and it was perfect. Delivery was fast too!"</p>
+                        <p class="customer-name">- John D.</p>
+                    </div>
+                </div>
+                <!-- Customer Review 2 -->
+                <div class="col-md-4">
+                    <div class="review-box">
+                        <p class="review-text">"Amazing flavors! The Pancit Bihon was just like my grandma used to make. Will definitely order again."</p>
+                        <p class="customer-name">- Oscar B.</p>
+                    </div>
+                </div>
+                <!-- Customer Review 3 -->
+                <div class="col-md-4">
+                    <div class="review-box">
+                        <p class="review-text">"Super impressed by the quality and taste of the food. A must-try for anyone craving Filipino dishes!"</p>
+                        <p class="customer-name">- Dave T.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of Customer Reviews Section -->
+
 
          <!-- Footer Section -->
          <footer class="mastfoot pb-5 bg-white section-padding pb-0">

@@ -7,7 +7,7 @@ if (isset($_SESSION['name']) == ""){
 
 <html>
     <head>
-    <title>Profil</title>
+    <title>Three Guys - Profile</title>
     <link rel="stylesheet" href="../bootstrap4/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/loginc.css" class="css">
     <link rel="stylesheet" href="../css/style.css" class="css">
@@ -19,8 +19,7 @@ if (isset($_SESSION['name']) == ""){
       <div class="shadow-lg bg-white rounded testmarg">
       <form action="edit.php" method="POST" enctype="multipart/form-data">
       <div class="text-center">
-      <img src="../img/logo.png" alt="FoodZone"><br><br>
-          <h1>Modify your account</h1><br><br>
+          <h2>Modify your account</h2><br><br>
           </div>
             <div class="form-group">
             <label for="nom"> Name </label>
@@ -35,7 +34,7 @@ if (isset($_SESSION['name']) == ""){
             </div>
 
             <div class="form-group">
-            <label for="adresse"> Adresse </label>
+            <label for="adresse"> Address </label>
             <input type="text" name="adresse" placeholder="Your adresse*" value="<?php echo $_SESSION['adr']; ?>" class="form-control" required>
             </div>
 
@@ -52,12 +51,12 @@ if (isset($_SESSION['name']) == ""){
             </div>
 
             <div class="form-group">
-            <label for="profpic"> Profil Pic </label>
+            <label for="profpic"> Profile Pic </label>
             <input type="file" name="profpic" class="form-control">
             </div>
 
             <div>
-            <button  type="submit" class="btn btn-primary btn-shadow btn-lg" name="update" >Valider</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+            <button  type="submit" class="btn btn-primary btn-shadow btn-lg" name="update" >Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
             <button  type="submit" class="btn btn-primary btn-shadow btn-lg" name="delete" >Delete Account</button>
             </div>
             </form>

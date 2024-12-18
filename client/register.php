@@ -6,7 +6,7 @@ if (isset($_SESSION['name']) != ""){
 ?>
 <html>
     <head>
-    <title>Signup</title>
+    <title>Three Guys - Signup</title>
     <link rel="stylesheet" href="../bootstrap4/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/loginc.css" class="css">
     <link rel="stylesheet" href="../css/style.css" class="css">

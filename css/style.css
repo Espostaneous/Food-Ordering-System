@@ -480,7 +480,7 @@ a:hover {
     background: #000; }
 
 #gtco-special-dishes h3 span {
-  color: #f34949; }
+  color:#7CB9E8 ; }
 
 .dishes-text {
   padding-left: 90px; }
@@ -534,3 +534,136 @@ a:hover {
 
 /*=====  End of RESPONSIVE  ======*/
 
+/* Container for the entire reviews section */
+#gtco-reviews-container {
+  width: 90%; /* Makes the container take up 90% of the width of the screen */
+  max-width: 1200px; /* Limits the maximum width */
+  margin: 0 auto; /* Centers the container horizontally */
+  padding: 0 15px; /* Adds horizontal padding */
+}
+
+/* Customer Reviews Section */
+#gtco-reviews {
+  background-color: #f8f9fa; /* Light gray background */
+  padding: 60px 0; /* Adds top and bottom padding */
+}
+
+/* Title of the reviews section */
+#gtco-reviews h2 {
+  font-size: 2rem; /* Adjust the size of the heading */
+  margin-bottom: 40px; /* Adds space below the heading */
+  color: #333; /* Dark color for the text */
+  text-align: center; /* Centers the title */
+}
+
+/* Review Box Styling */
+.review-box {
+  background-color: #fff; /* White background for each review box */
+  padding: 20px; /* Adds padding inside the review box */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  transition: all 0.3s ease; /* Smooth transition on hover */
+  margin-bottom: 30px; /* Adds space below each review box */
+}
+
+/* Hover effect for review boxes */
+.review-box:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Slightly deeper shadow on hover */
+  transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+/* Review Text */
+.review-text {
+  font-size: 1rem; /* Adjust the font size for review text */
+  color: #555; /* Lighter gray color for the review text */
+  margin-bottom: 20px; /* Adds space below the text */
+  font-style: italic; /* Italicize the review text */
+}
+
+/* Customer Name Styling */
+.customer-name {
+  font-size: 1.1rem; /* Slightly larger text for the customer's name */
+  font-weight: 600; /* Make the name bold */
+  color: #7CB9E8; /* Dark color for the name */
+  text-align: right; /* Align the name to the right */
+}
+
+/* Flexbox for review layout */
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Ensures items wrap to the next line if needed */
+}
+
+.col-md-4 {
+  width: 30%; /* Sets each review box width to 30% */
+  margin-bottom: 30px; /* Adds space below each box */
+}
+
+@media (max-width: 767px) {
+  .row {
+      flex-direction: column; /* Stack the reviews on smaller screens */
+  }
+
+  .col-md-4 {
+      width: 100%; /* Full width on smaller screens */
+  }
+}
+
+
+
+/* Section styling */
+#why-choose-us {
+  background-color: #f8f9fa; /* Light background color for the section */
+  padding: 60px 0;
+}
+
+/* Heading section */
+#why-choose-us .heading-section h2 {
+  font-size: 2rem;
+  font-weight: 200;
+  margin-bottom: 20px;
+  color: #333; /* Darker color for the heading */
+}
+
+#why-choose-us .heading-section p {
+  font-size: 1.1rem;
+  color: #666; /* Medium gray for the subtext */
+  margin-bottom: 40px;
+}
+
+/* Feature box styling */
+#why-choose-us .feature-box {
+  background-color: rgba(255, 255, 255, 0.534); /* White background for contrast */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#why-choose-us .feature-box h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333; /* Dark text for the heading */
+  margin-top: 20px;
+}
+
+#why-choose-us .feature-box p {
+  font-size: 1rem;
+  color: #666; /* Consistent gray text */
+  margin-top: 10px;
+}
+
+/* Hover effect for feature boxes */
+#why-choose-us .feature-box:hover {
+  background-color: #e9ecef; /* Slightly darker gray on hover */
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Responsive styling */
+@media (max-width: 767px) {
+  #why-choose-us .feature-box {
+      margin-bottom: 20px;
+  }
+}
