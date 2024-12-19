@@ -68,6 +68,7 @@ $data2 = $res2->fetch();
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
           <a class="dropdown-item" href="add_empl.php">Add Employee</a>
+          <a class="dropdown-item" href="add_driver.php">Add Driver</a>
           <a class="dropdown-item" href="product.php">Add Product</a>
           <a class="dropdown-item" href="cars.php">Add Car</a>
           <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>

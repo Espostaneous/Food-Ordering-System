@@ -47,13 +47,26 @@ class Adminstrator
             echo $ex->getMessage();
         }
 	}
-
+	
 	public function listemploys(){
 		$req = 'SELECT * FROM employé ';
 		$result = $this->pdo->prepare($req);
 		$result->execute();
 		return $result;
 	}
+	public function listclients(){
+		$req = 'SELECT * FROM clients ';
+		$result = $this->pdo->prepare($req);
+		$result->execute();
+		return $result;
+	}
+	public function getAllClients(){
+		$req = 'SELECT * FROM clients ';
+		$result = $this->pdo->prepare($req);
+		$result->execute();
+		return $result;
+	}
+
 
 	public function list_orders(){
 		$req = 'SELECT * FROM ordre ';
@@ -69,15 +82,13 @@ class Adminstrator
 		return $result;
 	}
 
-	public function delete_employ($eid){
-		$req = 'DELETE FROM employé WHERE eid = :eid';
-		$result = $this->pdo->prepare($req);
-		$result->bindParam(':eid',$eid);
-		if($result->execute()){
-			return $result;
-		}
-	}
-
+    public function number_of_clients()
+    {
+        $req = 'SELECT count(*) as clients FROM clients';
+        $result = $this->pdo->prepare($req);
+        $result->execute();
+        return $result;
+    }
 
     public function send_email($name,$email,$password){
 
