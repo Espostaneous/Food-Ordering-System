@@ -68,13 +68,18 @@
             return $result;
         }
 
-        public function delete_panier($pid){
-            $sql = 'DELETE FROM chariot WHERE pid = :pid';
+        public function delete_panier($pid, $cid) {
+            // Add the customer ID condition to ensure we delete the correct product for the correct user
+            $sql = 'DELETE FROM chariot WHERE pid = :pid AND cid = :cid';
             $result = $this->cnx->prepare($sql);
-            $result->bindParam(':pid',$pid);
+            $result->bindParam(':pid', $pid);
+            $result->bindParam(':cid', $cid);
             $result->execute();
+        
             return $result;
         }
+        
+        
 
     }
 
