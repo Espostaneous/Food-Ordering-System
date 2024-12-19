@@ -298,7 +298,7 @@ $data = $result->fetch();
                             chicken, pork, or shrimp. The dish is seasoned with soy sauce and sometimes fish sauce, and is often 
                             garnished with green onions, lemon, or calamansi.</p>
                         <h3 class="special-dishes-price">₱25.00</h3>
-                        <a href="lundin.php" class="btn-primary mt-3">Order Now</a>
+                        <a href="breakfast.php" class="btn-primary mt-3">Order Now</a>
                     </div>
                 </div>
                 <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
