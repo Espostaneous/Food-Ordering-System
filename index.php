@@ -224,7 +224,7 @@ $data = $result->fetch();
                                 <img class="img-fluid" src="img/hero-5.jpg" alt="">
                             </div>
                             <div class="item">
-                                <img class="img-fluid" src="img/hero-8.jpg" alt="">
+                                <img class="img-fluid" src="img/hero-9.jpg" alt="">
                             </div>
                             <div class="item">
                                 <img class="img-fluid" src="img/hero-10.jpg" alt="">

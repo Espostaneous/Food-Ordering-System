@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 18, 2024 at 04:31 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- Generation Time: Dec 19, 2024 at 03:49 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -166,6 +166,21 @@ INSERT INTO `produits` (`pid`, `name`, `description`, `price`, `file`, `type`) V
 (47, 'sinigang', 'made with tender pork, vegetables like kangkong, radish, eggplant, and okra, all simmered in a tamarind-based broth.', 80, 'sinigang na baboy.jpg', 'lunch'),
 (48, 'kare kare', 'made with oxtail, tripe, or pork, cooked in a savory peanut-based sauce.Vegetables like eggplant and string beans.', 80, 'kare kare.jpg', 'breakfast');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_driver`
+--
+
+CREATE TABLE `tbl_driver` (
+  `Did` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `phno` int(15) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `type` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 --
 -- Indexes for dumped tables
 --
@@ -209,6 +224,12 @@ ALTER TABLE `ordre`
 --
 ALTER TABLE `produits`
   ADD PRIMARY KEY (`pid`);
+
+--
+-- Indexes for table `tbl_driver`
+--
+ALTER TABLE `tbl_driver`
+  ADD PRIMARY KEY (`Did`);
 
 --
 -- AUTO_INCREMENT for dumped tables
