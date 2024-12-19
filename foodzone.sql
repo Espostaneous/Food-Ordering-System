@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 19, 2024 at 03:49 AM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.0.30
+-- Generation Time: Dec 19, 2024 at 06:21 AM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -129,7 +129,18 @@ INSERT INTO `ordre` (`oid`, `qty`, `status`, `pid`, `cid`) VALUES
 (104, 1, 1, 33, 5),
 (105, 1, 1, 31, 5),
 (106, 1, 1, 33, 5),
-(107, 1, 1, 29, 5);
+(107, 1, 1, 29, 5),
+(108, 1, 1, 31, 5),
+(109, 1, 1, 33, 5),
+(110, 1, 1, 29, 5),
+(111, 1, 1, 31, 5),
+(112, 1, 1, 31, 5),
+(113, 1, 1, 31, 5),
+(114, 1, 1, 31, 5),
+(115, 1, 1, 31, 5),
+(116, 1, 1, 31, 5),
+(117, 1, 1, 33, 5),
+(118, 1, 1, 33, 5);
 
 -- --------------------------------------------------------
 
@@ -157,9 +168,9 @@ INSERT INTO `produits` (`pid`, `name`, `description`, `price`, `file`, `type`) V
 (31, 'batchoy', 'made with miki noodles, pork, beef, or chicken, topped with pork liver, chicharon, green onions, garlic, and egg.', 60, 'batchoy.jpg', 'lunch'),
 (32, 'adobo', 'made by simmering meat, typically chicken or pork, in a flavorful mix of soy sauce, vinegar, garlic, bay leaves, and peppercorns.', 45, 'adobo.jpg', 'breakfast'),
 (33, 'bulalo', 'made with tender beef chunks simmered to perfection with potatoes, carrots, cabbage, and pechay (bok choy).', 55, 'bulalo.jpg', 'lunch'),
-(40, 'adobong kangkong', 'featuring water spinach (kangkong) cooked in a savory and tangy sauce made with soy sauce, vinegar, garlic, and onions. ', 30, 'adobong kangkong.jpg', 'breakfast'),
+(40, 'arroz caldo', ' a creamy, hearty dish made by simmering rice in a ginger-infused broth until it reaches a porridge-like consistency.', 30, 'arroz caldo.jpg', 'breakfast'),
 (41, 'beef nilaga', 'made with tender beef chunks simmered to perfection with potatoes, carrots, cabbage, and pechay (bok choy).', 45, 'beef nilaga.jpg', 'lunch'),
-(42, 'chopsuey', 'made with a colorful mix of vegetables like carrots, cabbage, cauliflower, broccoli, and snow peas.', 35, 'chopsuey.jpg', 'breakfast'),
+(42, 'pancit bihon', 'a stir-fried noodle dish where bihon noodles are cooked with a blend of meat, vegetables, and savory seasonings.', 25, 'pancit bihon.jpg', 'breakfast'),
 (43, 'pancit malabon', 'topped with an array of ingredients such as shrimp, squid, smoked fish flakes, boiled eggs, and crushed chicharon.', 50, 'pancit malabon.jpg', 'breakfast'),
 (45, 'tortang talong', 'features grilled or roasted eggplant, which is flattened and dipped in a seasoned egg mixture, then pan-fried to perfection.', 80, 'tortang talong.jpg', 'breakfast'),
 (46, 'lechon kawali', 'made by deep-frying pork belly, juicy meat with a crunchy skin is often served with a side of liver sauce, and soy-vinegar dip.', 80, 'lechon kawali.jpg', 'lunch'),
@@ -245,7 +256,7 @@ ALTER TABLE `car`
 -- AUTO_INCREMENT for table `chariot`
 --
 ALTER TABLE `chariot`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=200;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=211;
 
 --
 -- AUTO_INCREMENT for table `clients`
@@ -263,7 +274,7 @@ ALTER TABLE `employé`
 -- AUTO_INCREMENT for table `ordre`
 --
 ALTER TABLE `ordre`
-  MODIFY `oid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=108;
+  MODIFY `oid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=119;
 
 --
 -- AUTO_INCREMENT for table `produits`
