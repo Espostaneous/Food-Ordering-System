@@ -171,10 +171,12 @@ $data = $result->fetch();
                                     color:white !important;
                                 }
                             </style>
-                               <a href="listepanier.php" class="btn btn-outline-danger">
-          <i class="fa fa-shopping-cart" style="opacity:1"></i>
-          &nbsp;&nbsp;<span class="badge badge-sm-light"><?php echo isset($_SESSION['badge']) ? $_SESSION['badge'] : 0; ?></span>
-        </a>
+                                <li class="nav-item ml-5">
+    <a href="listepanier.php" class="btn btn-outline-danger">
+        <i class="fa fa-shopping-cart" style="opacity:1"></i>
+        &nbsp;&nbsp;<span class="badge badge-sm-light"><?php echo isset($_SESSION['badge']) ? $_SESSION['badge'] : 0; ?></span>
+    </a>
+</li>
                             </li>
 
                             <?php } ?>

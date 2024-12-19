@@ -1,11 +1,17 @@
 <?php
 require "panier/classes/pnaier.class.php";
 session_start();
+
+// Ensure the user is logged in
 if (isset($_SESSION['name']) == '') {
     header('location:client/loginc');
+    exit();
 }
+
 $panier = new Panier;
-$res = $panier->whatinpanier();
+
+// Fetch cart items based on the session customer ID
+$res = $panier->whatinpanier();  // Fetch cart data from the database or session
 $data = $res->fetch();
 ?>
 
