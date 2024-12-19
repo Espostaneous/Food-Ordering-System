@@ -1,7 +1,7 @@
-<?php 
+<?php
 require "panier/classes/pnaier.class.php";
 session_start();
-if(isset($_SESSION['name']) == ''){
+if (isset($_SESSION['name']) == '') {
     header('location:client/loginc');
 }
 $panier = new Panier;
@@ -36,7 +36,7 @@ $data = $res->fetch();
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-        <script src="https://use.fontawesome.com/5b67370c4c.js"></script>
+    <script src="https://use.fontawesome.com/5b67370c4c.js"></script>
 
 
     <!-- CSS -->
@@ -124,43 +124,44 @@ $data = $res->fetch();
                                     <a class="dropdown-item" href="lundin.php">Lunch/Dinner</a>
                                 </div>
                             </li>
-                            <?php 
-                            if(isset($_SESSION['name'])){
-                            ?>
+                            <?php
+                            if (isset($_SESSION['name'])) {
+                                ?>
 
-                            <li class="nav-item">
-                            <img src="client/<?php echo $_SESSION['img']; ?>"  style="width:40px; height:40px; border-radius:50%;">
-                            </li>
-                            
-                            <li class="nav-item">
-                                <a href="client/profil.php" class="nav-link"><?php echo $_SESSION['name']; ?></a>
-                            </li>
+                                <li class="nav-item">
+                                    <img src="client/<?php echo $_SESSION['img']; ?>"
+                                        style="width:40px; height:40px; border-radius:50%;">
+                                </li>
 
-                            <li class="nav-item dropdown">
-                                <a class="nav-link" href="client/logout.php?logout">Logout</a>
-                            </li>
-                            <li class="nav-item ml-5">
-                            <style>
-                                .btn-outline-danger:hover {
-                                    color:white !important;
-                                }
-                            </style>
-                                <a href="listepanier.php" class="btn btn-outline-danger">
-                                    <i class="fa fa-shopping-cart" style="opacity:1"></i>
-                                    &nbsp;&nbsp;<span class="badge badge-sm-light" id="success"></span>
-                                </a>
-                            </li>
-                            <?php }else {?>
+                                <li class="nav-item">
+                                    <a href="client/profil.php" class="nav-link"><?php echo $_SESSION['name']; ?></a>
+                                </li>
 
-                           
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link" href="client/logout.php?logout">Logout</a>
+                                </li>
+                                <li class="nav-item ml-5">
+                                    <style>
+                                        .btn-outline-danger:hover {
+                                            color: white !important;
+                                        }
+                                    </style>
+                                    <a href="listepanier.php" class="btn btn-outline-danger">
+                                        <i class="fa fa-shopping-cart" style="opacity:1"></i>
+                                        &nbsp;&nbsp;<span class="badge badge-sm-light" id="success"></span>
+                                    </a>
+                                </li>
+                            <?php } else { ?>
 
-                            <li class="nav-item">
-                                <a class="nav-link" href="client/loginc.php">Login</a>
-                            </li>
 
-                            <li class="nav-item dropdown">
-                                <a class="nav-link" href="client/register.php">Sign Up</a>
-                            </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="client/loginc.php">Login</a>
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link" href="client/register.php">Sign Up</a>
+                                </li>
                             <?php } ?>
                         </div>
                     </ul>
@@ -168,88 +169,117 @@ $data = $res->fetch();
             </div>
         </nav>
 
-    <div class="container">
-    <div class="row">
-        <div class="col-sm-12 col-md-10 col-md-offset-1">
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th>Product</th>
-                        <th>Quantity</th>
-                        <th class="text-center">Price</th>
-                        <th class="text-center">Operation</th>
-                    </tr>
-                </thead>
-                <tbody>
-                <?php 
-                $total_prix = 0;
-                while($data = $res->fetch()) {
-                    $total_prix += $data['price'];
-                    ?>
-                    <tr>
-                        <td class="col-sm-8 col-md-6">
-                        <div class="media">
-                            <a class="thumbnail pull-left" href="#"> <img class="media-object" src="admin/uploads/<?php echo $data['file']?>" style="width: 50px; height: 50px;"> </a>
-                            <div class="media-body">
-                                <h4 class="media-heading"><?php echo $data['name']?></h4>
-                            </div>
-                        </div></td>
-                        <td class="col-sm-1 col-md-1" style="text-align: center">
-                        <input type="text" class="form-control"  value="<?php echo $data['qty']?>">
-                        </td>
-                        <td class="col-sm-1 col-md-1 text-center"> ₱ <strong><?php echo $data['price']?> </strong></td>
-                        <td class="col-sm-1 col-md-1">
-                        <a href="deletepanier.php?id=<?php echo $data['pid']?>" class="btn btn-danger">
-                        <i class="fa fa-trash"></i>
-                        </a>
-                        </td>
-                    </tr>
-                <?php }?>
-                </tbody>
-            </table>
-            <h5>shipping: free</h5>
-            <h3> Total: ₱ <?php echo $total_prix ;?> </h3>
-            <h5>Cash on Delivery</h5>
-            <a href="index.php" class="btn btn-default">
-                <span class="glyphicon glyphicon-shopping-cart"></span>Continue Shopping
-            </a>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-10 col-md-offset-1">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Quantity</th>
+                                <th class="text-center">Price</th>
+                                <th class="text-center">Operation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            $total_prix = 0;
+                            while ($data = $res->fetch()) {
+                                $total_prix += $data['price'];
+                                ?>
+                                <tr>
+                                    <td class="col-sm-8 col-md-6">
+                                        <div class="media">
+                                            <a class="thumbnail pull-left" href="#"> <img class="media-object"
+                                                    src="admin/uploads/<?php echo $data['file'] ?>"
+                                                    style="width: 50px; height: 50px;"> </a>
+                                            <div class="media-body">
+                                                <h4 class="media-heading"><?php echo $data['name'] ?></h4>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="col-sm-1 col-md-1" style="text-align: center">
+                                        <input type="text" class="form-control" value="<?php echo $data['qty'] ?>">
+                                    </td>
+                                    <td class="col-sm-1 col-md-1 text-center"> ₱ <strong><?php echo $data['price'] ?>
+                                        </strong></td>
+                                    <td class="col-sm-1 col-md-1">
+                                        <a href="deletepanier.php?id=<?php echo $data['pid'] ?>" class="btn btn-danger">
+                                            <i class="fa fa-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            <?php } ?>
+                        </tbody>
+                    </table>
+                    <h5>shipping: free</h5>
+                    <h3> Total: ₱ <?php echo $total_prix; ?> </h3>
+                    <h5>Cash on Delivery</h5>
+                    <a href="index.php" class="btn btn-default">
+                        <span class="glyphicon glyphicon-shopping-cart"></span>Continue Shopping
+                    </a>
                     <style>
                         .btn-success {
-                         background-color: #0066b2;
-                         border-color: #0066b2;
-                         color: white;
+                            background-color: #0066b2;
+                            border-color: #0066b2;
+                            color: white;
                         }
 
                         .btn-success:hover {
-                         color: aliceblue;
-                         background-color: #034694; /* Optional: Darker blue for hover effect */
-                         border-color: #034694;
-                         }
+                            color: aliceblue;
+                            background-color: #034694;
+                            /* Optional: Darker blue for hover effect */
+                            border-color: #034694;
+                        }
                     </style>
-            <a href="checkout.php" class="btn btn-success">
-                Checkout <span class="glyphicon glyphicon-play"></span>
-            </a>
+                    <a href="javascript:void(0)" class="btn btn-success" data-toggle="modal"
+                        data-target="#checkoutModal">
+                        Checkout <span class="glyphicon glyphicon-play"></span>
+                    </a>
+
+                </div>
+            </div>
         </div>
-    </div>
-</div>
 
 
 
 
-            <!-- External JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
-    <script src="vendor/bootstrap/popper.min.js"></script>
-    <script src="vendor/bootstrap/bootstrap.min.js"></script>
-    <script src="vendor/select2/select2.min.js "></script>
-    <script src="vendor/owlcarousel/owl.carousel.min.js"></script>
-    <script src="https://cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.js"></script>
-    <script src="vendor/stellar/jquery.stellar.js" type="text/javascript" charset="utf-8"></script>
-    <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
+        <!-- External JS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+        <script src="vendor/bootstrap/popper.min.js"></script>
+        <script src="vendor/bootstrap/bootstrap.min.js"></script>
+        <script src="vendor/select2/select2.min.js "></script>
+        <script src="vendor/owlcarousel/owl.carousel.min.js"></script>
+        <script src="https://cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.js"></script>
+        <script src="vendor/stellar/jquery.stellar.js" type="text/javascript" charset="utf-8"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
 
-    <!-- Main JS -->
-    <script src="js/app.min.js "></script>
+        <!-- Main JS -->
+        <script src="js/app.min.js "></script>
+        <!-- Checkout Confirmation Modal -->
+        <div class="modal fade" id="checkoutModal" tabindex="-1" role="dialog" aria-labelledby="checkoutModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="checkoutModalLabel">Confirm Checkout</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Are you sure you want to proceed to checkout?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <a href="checkout.php" class="btn btn-success">Yes, Proceed</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 </body>
 
-</html
+</html>
