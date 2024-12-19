@@ -24,7 +24,7 @@ $data2 = $res2->fetch();
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Dashboard</title>
+  <title>Three Guys - Dashboard</title>
 
   <!-- Custom fonts for this template-->
   <link href="../style/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
